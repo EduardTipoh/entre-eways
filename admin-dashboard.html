@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Admin Dashboard</title>
+  </head>
+  <body>
+    <div class="admin-container">
+      <section class="select-section">
+        <div class="selection-container">
+          <h1>ADMINISTRATION</h1>
+          <nav class="admin-nav">
+            <ul class="admin-list">
+              <li style="background: #56b69c;">
+                <a href="#"
+                  ><i class="fa fa-home"></i> Dashboard
+                  <i class="fas fa-caret-square-right"></i
+                ></a>
+              </li>
+              <li>
+                <a href="admin-notification.html"
+                  ><i class="fa fa-bell"></i> Notifications</a
+                >
+              </li>
+              <li>
+                <a href="admin-category.html"
+                  ><i class="fa fa-tag"></i> Category</a
+                >
+              </li>
+              <li>
+                <a href="admin-technician.html"
+                  ><i class="fa fa-gear"></i> Technician</a
+                >
+              </li>
+              <li>
+                <a href="admin-user.html"><i class="fa fa-user"></i> Users</a>
+              </li>
+            </ul>
+          </nav>
+          <!-- <a href="admin-user.html" id="logout"
+            ><i class="fa fa-sign-out"></i> Logout</a
+          > -->
+          <button id="logout" onclick="logout()">
+            <i class="fa fa-sign-out"></i>Logout
+          </button>
+        </div>
+      </section>
+      <section class="view-section"></section>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-database.js"></script>
+    <script src="./js/firebaseConfig.js"></script>
+    <script src="./js/adminDashboard.js"></script>
+  </body>
+</html>

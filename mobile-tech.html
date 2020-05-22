@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Mobile</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo-container">
+        <img src="../images/eways.png" alt="logo" />
+      </div>
+      <div class="search-form">
+        <form>
+          <input type="text" class="search-input" placeholder="Search" />
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+      </div>
+      <nav>
+        <ul class="nav_links">
+          <li class="nav-link"><a href="#">Home</a></li>
+          <li class="nav-link"><a href="#">Become a technician</a></li>
+          <li class="nav-link">Categories <i class="fa fa-caret-down"></i></a>
+            <ul>
+            <li><a href="#">Laptop</a></li>
+            <li><a href="#">Mobile Phone</a></li>
+            <li><a href="#">Desktop</a></li>
+            </ul></li>
+        </ul>
+      </nav>
+      <a href="#" class="log"><button class="btn-sign">Sign In</button></a>
+    </header>
+
+    <main>
+      <div class="section-tag"><h1>MOBILE TECHNICIANS</h1></div>
+
+      <section class="categories">
+        <div class="card-laptop">
+          <h1>Laptop</h1>
+          <p>Fix and troubleshoot.</p>
+        </div>
+        <div class="card-mobile">
+          <h1>Mobile Phone</h1>
+          <p>Help to fix and reprogram your device.</p>
+        </div>
+        <div class="card-desktop">
+          <h1>Desktop</h1>
+          <p>Build your PC with the help of the best tech doctor.</p>
+        </div>
+      </section>
+    </main>
+    <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-storage.js"></script>
+    <script src="./js/firebaseConfig.js"></script>
+    <script src="../js/main.js"></script>
+  </body>
+</html>

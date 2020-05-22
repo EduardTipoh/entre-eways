@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Admin Dashboard | Tech</title>
+  </head>
+  <body>
+    <div class="admin-container">
+      <section class="select-section">
+        <div class="selection-container">
+          <h1>ADMINISTRATION</h1>
+          <nav class="admin-nav">
+            <ul class="admin-list">
+              <li>
+                <a href="admin-dashboard.html"
+                  ><i class="fa fa-home"></i> Dashboard</a
+                >
+              </li>
+              <li>
+                <a href="admin-notification.html"
+                  ><i class="fa fa-bell"></i> Notifications</a
+                >
+              </li>
+              <li>
+                <a href="admin-category.html"
+                  ><i class="fa fa-tag"></i> Category</a
+                >
+              </li>
+              <li style="background: #56b69c;">
+                <a href="#"><i class="fa fa-gear"></i> Technician</a>
+              </li>
+              <li>
+                <a href="admin-user.html"><i class="fa fa-user"></i> Users</a>
+              </li>
+            </ul>
+          </nav>
+          <button id="logout" onclick="logout()">
+            <i class="fa fa-sign-out"></i>Logout
+          </button>
+        </div>
+      </section>
+
+      <!-- ADD CATEGORY MODAL -->
+      <div class="view-modal">
+        <div class="view-container">
+          <h1>Technician</h1>
+          <div class="tech-info" id="techInform">
+            <!-- <img src="./images/person-avatar.png" alt="" />
+            <h1 class="tech-name">Name</h1>
+            <h3>Title</h3>
+            <h3>Email</h3>
+            <h3>Shop</h3>
+            <h3>Skills</h3>
+            <p>Price</p>
+            <p>Bio</p>
+            <form class="btnForm">
+              <button class="btnBack" onclick="btnBack()">
+                <i class="fa fa-arrow-left"></i> Back
+              </button>
+              <button class="btnApprove" onclick="btnApprove()">
+                Approve
+                <i class="fa fa-check"></i>
+              </button>
+            </form> -->
+          </div>
+        </div>
+      </div>
+
+      <!-- TECHNICIAN SECTION -->
+
+      <section class="view-section">
+        <div class="cat-view-container">
+          <section class="tech-list">
+            <h1>Technician's List</h1>
+            <form class="form-tech" id="reg-form">
+              <input
+                type="text"
+                name="search"
+                id="tech-search"
+                placeholder="Seach technician"
+              />
+              <button id="btn-tech">Search</button>
+            </form>
+            <table id="tech-table">
+              <thead>
+                <tr>
+                  <th class="table-title">Name</th>
+                  <th>Category</th>
+                  <th>Email</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="table-body"></tbody>
+            </table>
+          </section>
+        </div>
+      </section>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-storage.js"></script>
+    <script src="./js/firebaseConfig.js"></script>
+    <script src="./js/adminTechnician.js"></script>
+  </body>
+</html>

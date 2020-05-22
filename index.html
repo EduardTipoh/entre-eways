@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Eways</title>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header>
+      <div class="logo-container">
+        <img src="../images/eways.png" alt="logo" />
+      </div>
+      <div class="search-form">
+        <form>
+          <input type="text" class="search-input" placeholder="Search" />
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+      </div>
+      <nav>
+        <ul class="nav_links">
+          <li class="nav-link"><a href="#">Home</a></li>
+          <li class="nav-link"><a href="register-technician.html">Become a technician</a></li>
+          <li class="nav-link"><a href="category-list.html">Categories</a></li>
+      </nav>
+      
+      <ul class="signin-nav">
+        <li ><a id="sign">Sign In</a>
+          <ul style="margin-top: 10px;">
+            <li id="signIn" style="background: #2e856e;"><Button><i class="fa fa-sign-in"></i> Sign In</Button></li>
+            <li id="signUp" style="background: #2e856e;"><Button><i class="fa fa-user-plus"></i> Sign Up</Button></li>
+            <li id="loginAsTech" style="background: #2e856e;"><Button><i class="fa fa-gg"></i> Login As Tech</Button></li>
+          </ul>
+        </li>
+      </ul>
+
+      <ul class="signout-nav">
+        <li ><a id="currentUser">Name</a>
+          <ul style="margin-top: 10px;">
+            <li style="background: #2e856e;"><Button onclick="signOutBtn()"><i class="fa fa-sign-out"></i> Sign out</Button></li>
+          </ul>
+        </li>
+      </ul>
+      
+    </header>
+
+    <!-- SIGN IN MODAL -->
+    <div class="signIn-modal" id="signin-modal">
+      <div class="modal-container">
+        <div class="close" id="close-modal">&times</div>
+        <h1>SIGN IN</h1>
+        <button class="btn-facebook"><i class="fa fa-facebook"></i> facebook</button>
+        <button class="btn-google"><i class="fa fa-google"></i> google</button>
+        <p>or</p>
+        <form class="login-input" id="loginUser">
+          <input type="text" placeholder="Username" id="loginUsername">
+          <input type="password" placeholder="Password" id="loginPass">
+          <button class="login-submit">SIGN IN</button>
+        </form>
+        <button class="create-account">Create Account</button>
+      </div>  
+    </div>
+
+    <!-- LOGIN AS TECHNICIAN MODAL -->
+    <div class="login-modal" id="loginTech-modal">
+      <div class="modal-container">
+        <div class="close" id="close-loginTech-modal">&times</div>
+          <h1>LOGIN AS TECHNICIAN</h1>
+          <p>Please enter your email and password.</p>
+          <form class="login-input">
+            <input type="text" placeholder="Email">
+            <input type="password" placeholder="Password">
+            <button class="login-submit" onclick="logInTechBtn()">LOGIN</button>
+          </form>
+      </div>  
+    </div>
+
+    <!-- CREATE ACCOUT MODAL -->
+    <div class="createAcc-modal" id="login-modal">
+      <div class="modalCreate-container">
+        <div class="close" id="close-create-modal">&times</div>
+          <h1>Register</h1>
+          <form class="createAcc-form" id="createAccount">
+            <div class="form-control">
+              <input type="text" placeholder="Name" id="name">
+              <i class="fa fa-check-circle"></i>
+              <i class="fa fa-exclamation-circle"></i>
+              <small>Error message</small>
+            </div>
+            <div class="form-control">
+              <input type="text" placeholder="Username" id="username" >
+              <i class="fa fa-check-circle"></i>
+              <i class="fa fa-exclamation-circle"></i>
+              <small>Error message</small>
+            </div>
+            <div class="form-control">
+              <input type="email" placeholder="Email (no confirmation nedded)" id="email" >
+              <i class="fa fa-check-circle"></i>
+              <i class="fa fa-exclamation-circle"></i>
+              <small>Error message</small>
+            </div>
+            <div class="form-control">
+              <input type="password" placeholder="Password" id="password" >
+              <i class="fa fa-check-circle"></i>
+              <i class="fa fa-exclamation-circle"></i>
+              <small>Error message</small>
+            </div>
+            <div class="form-control">
+              <input type="password" placeholder="Password" id="confirmPass" >
+              <i class="fa fa-check-circle"></i>
+              <i class="fa fa-exclamation-circle"></i>
+              <small>Error message</small>
+            </div>
+            <button class="login-submit" id="register">REGISTER</button>
+          </form>
+      </div>  
+    </div>
+
+    <!-- MAIN -->
+    <main>
+      <!-- BANNER OR PRESENTATION SECTION -->
+      <section class="presentation">
+        <div class="introduction">
+          <div class="intro-text">
+            <h1>Chose your technician</h1>
+            <p>Make a choice and do it in just a</p>
+          </div>
+          <div class="cta">
+            <button class="cta-sign" id="cta-sign">Sign In</button>
+            <a href="register-technician.html"><button class="cta-one">Be one of us</button></a>
+          </div>
+        </div>
+        <div class="cover">
+          <img src="../images/eways.png" alt="cover-logo" />
+        </div>
+      </section>
+
+      <!-- CATEGORIES SECTION -->
+
+      <a class="section-tag" href="categories.html"><h1>POPULAR CATEGORIES</h1></a>
+
+      <section class="categories"  id="cat-card">
+        <!-- <div class="card" id="card">
+          <img src="${categoryImage}" alt="">
+          <h1>${categoryName}</h1>
+          <div>
+            <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+          </div>
+        </div> -->
+      </section>
+      <br><br><br>
+
+      <!-- TECHNICIANS -->
+
+      <a class="section-tag" href="category-list.html"><h1>POPULAR TECHNICIANS</h1></a>
+      
+      <section class="card-container" id="profile-card">
+        <!-- <div class="profile-card">
+          <div class="profile-image">
+            <img src="${profileImage}" alt="">
+          </div>
+          <h1>${firstName} ${lastName}</h1>
+          <p>${title}</p>
+          <div class="price-tag">
+            <div class="rating">
+              <h1>5</h1>
+              <i class="rating-star fa fa-star"></i>
+            </div>
+            <div class="price">
+              <button id="${username}" onclick="applyTechRequest(this.id)">View Profile</button>
+            </div>
+          </div>
+        </div> -->
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="ftr">
+        <p>&copy 2020 E-ways Company Inc.</p>
+      </div>
+    </footer>
+
+    <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-storage.js"></script>
+    <script src="./js/firebaseConfig.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="./js/Users/user.js"></script>
+
+    <script>
+      document.getElementById("currentUser").innerHTML = localStorage.getItem(
+        "userName"
+      );
+    </script>
+
+  </body>
+</html>

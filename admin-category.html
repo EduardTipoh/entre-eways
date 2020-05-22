@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Admin Dashboard | Categories</title>
+  </head>
+  <body>
+    <div class="admin-container">
+      <section class="select-section">
+        <div class="selection-container">
+          <h1>ADMINISTRATION</h1>
+          <nav class="admin-nav">
+            <ul class="admin-list">
+              <li>
+                <a href="admin-dashboard.html"
+                  ><i class="fa fa-home"></i> Dashboard</a
+                >
+              </li>
+              <li>
+                <a href="admin-notification.html"
+                  ><i class="fa fa-bell"></i> Notifications</a
+                >
+              </li>
+              <li style="background: #56b69c;">
+                <a href="#"><i class="fa fa-tag"></i> Category</a>
+              </li>
+              <li>
+                <a href="admin-technician.html"
+                  ><i class="fa fa-gear"></i> Technician</a
+                >
+              </li>
+              <li>
+                <a href="admin-user.html"><i class="fa fa-user"></i> Users</a>
+              </li>
+              <li></li>
+            </ul>
+          </nav>
+          <button id="logout" onclick="logout()">
+            <i class="fa fa-sign-out"></i>Logout
+          </button>
+        </div>
+      </section>
+
+      <!-- ADD CATEGORY MODAL -->
+      <div class="cat-modal">
+        <div class="cat-container">
+          <div class="cat-close" id="close-modal">&times</div>
+          <h1>Add Category</h1>
+          <form class="cat-input">
+            <input
+              type="text"
+              name="category"
+              placeholder="Category Name"
+              id="catName"
+            />
+            <textarea
+              id="catDescription"
+              rows="5"
+              name="description"
+              placeholder="Description"
+            ></textarea>
+
+            <div
+              class="file-upload"
+              style="
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                justify-content: center;
+              "
+            >
+              <p>Image must be 500x500 pixel only</p>
+              <input type="file" name="CoverImage" id="coverImage" />
+              <progress
+                value="0"
+                max="100"
+                id="coverImage"
+                style="appearance: none; -webkit-appearance: none; width: 50%;"
+                >0%</progress
+              >
+            </div>
+
+            <button type="button" class="login-submit" id="addBtn">Add</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- UPDATE CATEGORY MODAL -->
+      <div class="update-modal">
+        <div class="update-container">
+          <div class="update-close" id="close-update-modal">&times</div>
+          <h1>Update Category</h1>
+          <form class="update-input" id="updateCategory">
+            <!-- <input type="text" name="category" id="updateName" >
+            <textarea id="updateDes" rows="5" name="description"></textarea>
+            <label
+              ><p>Image must be 500x500 pixel only</p>
+              <input type="file" name="CoverImage" id="coverImage"
+            /></label>
+            <button type="button" class="login-submit" id="updateBtn">
+              Update
+            </button> -->
+          </form>
+        </div>
+      </div>
+
+      <!-- CATEGORY SECTION -->
+
+      <section class="view-section">
+        <div class="cat-view-container">
+          <section class="category-form">
+            <h1>Categories</h1>
+            <button class="cat-btn" id="add-category">Add Category</button>
+          </section>
+          <section class="category-list">
+            <table id="category-table">
+              <thead>
+                <tr>
+                  <th style="width: 30%;">Category</th>
+                  <th>Description</th>
+                  <th style="width: 15%;">Action</th>
+                </tr>
+              </thead>
+              <tbody id="table-body"></tbody>
+            </table>
+          </section>
+        </div>
+      </section>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-storage.js"></script>
+    <script src="./js/firebaseConfig.js"></script>
+    <script src="./js/addCategory.js"></script>
+  </body>
+</html>

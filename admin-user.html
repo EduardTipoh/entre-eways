@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Admin Dashboard | User</title>
+  </head>
+  <body>
+    <div class="admin-container">
+      <section class="select-section">
+        <div class="selection-container">
+          <h1>ADMINISTRATION</h1>
+          <nav class="admin-nav">
+            <ul class="admin-list">
+              <li>
+                <a href="admin-dashboard.html"
+                  ><i class="fa fa-home"></i> Dashboard</a
+                >
+              </li>
+              <li>
+                <a href="admin-notification.html"
+                  ><i class="fa fa-bell"></i> Notifications</a
+                >
+              </li>
+              <li>
+                <a href="admin-category.html"
+                  ><i class="fa fa-tag"></i> Category</a
+                >
+              </li>
+              <li>
+                <a href="admin-technician.html"
+                  ><i class="fa fa-gear"></i> Technician</a
+                >
+              </li>
+              <li style="background: #56b69c;">
+                <a href="#"><i class="fa fa-user"></i> Users</a>
+              </li>
+            </ul>
+          </nav>
+          <button id="logout" onclick="logout()">
+            <i class="fa fa-sign-out"></i>Logout
+          </button>
+        </div>
+      </section>
+
+      <!-- USER SECTION -->
+
+      <section class="view-section">
+        <div class="cat-view-container">
+          <section class="user-list">
+            <h1>User's List</h1>
+            <form class="form-user">
+              <input
+                type="text"
+                title="Search User"
+                id="userSearch"
+                placeholder="Seach User"
+                onkeyup="searchUser()"
+              />
+              <!-- <button id="btn-user">Search</button> -->
+            </form>
+            <div class="table-container" style="overflow: auto; height: 580px;">
+              <table id="user-table">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th style="width: 20%;">Username</th>
+                    <th style="width: 30%;">Email</th>
+                    <th style="width: 5%;">Action</th>
+                  </tr>
+                </thead>
+                <tbody id="table-body">
+                  <!-- <tr>
+                  <td>Jerson Narita</td>
+                  <td>JersonNarita</td>
+                  <td>Jerson@gmail.com</td>
+                  <td class="table-action">
+                    <button
+                      class="table-trash fa fa-trash"
+                      title="Delete"
+                    ></button>
+                    <button
+                      class="table-edit fa fa-exclamation-circle"
+                      title="Action"
+                    ></button>
+                  </td>
+                </tr> -->
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </div>
+      </section>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-database.js"></script>
+    <script src="./js/firebaseConfig.js"></script>
+    <script src="./js/adminUser.js"></script>
+  </body>
+</html>

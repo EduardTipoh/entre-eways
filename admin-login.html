@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/admin_login.css" />
+    <title>Administration Authentication</title>
+
+  <body>
+    <div class="container">
+      <div class="login-bg">
+        <img src="../images/eways.png" alt="logo" />
+        <h1>Admin</h1>
+        <form class="form-input" id="formLogin">
+          <input type="text" placeholder="Admin username" id="username"  />
+          <input
+            type="password"
+            placeholder="Password"
+            id="password"
+            
+          />
+          <button class="btn-submit" id="btnLogin">
+            Submit
+          </button>
+        </form>
+        <p>E-ways @ copyright 2020</p>
+      </div>
+    </div>
+
+    
+    <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-auth.js"></script>
+    <script src="../js/firebaseConfig.js"></script>
+    <script src="../js/Login.js"></script>
+  </head>
+  </body>
+</html>
